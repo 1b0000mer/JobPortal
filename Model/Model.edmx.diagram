@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="864684b21d5040b1a9bc6e7ba4f43800" Name="Diagram1">
+        <EntityTypeShape EntityType="JobsModel.Admin" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsModel.City" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsModel.CompanyInfo" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsModel.CompanyListAppyly" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsModel.Education" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsModel.Employment" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsModel.InfoUser" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsModel.Job" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsModel.JobCatalog" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsModel.Position" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="JobsModel.FK_Job_City_CityID" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsModel.FK_CompanyListAppyly_CompanyInfo_ComID" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsModel.FK_CompanyListAppyly_InfoUser_USERID" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsModel.FK_CompanyListAppyly_Job_JobID" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsModel.FK_Education_InfoUser_USERID" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsModel.FK_Employment_InfoUser_UserID" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsModel.FK_Job_JobCatalog_JobCatID" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsModel.FK_Job_Position_PositionID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,23 @@
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\DataLayer\bin\Debug\DataLayer.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\DataLayer\bin\Debug\DataLayer.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\DataLayer\obj\Debug\DataLayer.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\DataLayer\obj\Debug\DataLayer.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\DataLayer\bin\Debug\EntityFramework.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\DataLayer\bin\Debug\Model.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\DataLayer\bin\Debug\Model.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\DataLayer\bin\Debug\EntityFramework.xml
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\Downloads\JobPortal\JobPortal\DataLayer\bin\Debug\DataLayer.dll
+E:\Downloads\JobPortal\JobPortal\DataLayer\bin\Debug\DataLayer.pdb
+E:\Downloads\JobPortal\JobPortal\DataLayer\bin\Debug\EntityFramework.dll
+E:\Downloads\JobPortal\JobPortal\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\Downloads\JobPortal\JobPortal\DataLayer\bin\Debug\Model.dll
+E:\Downloads\JobPortal\JobPortal\DataLayer\bin\Debug\Model.pdb
+E:\Downloads\JobPortal\JobPortal\DataLayer\bin\Debug\Model.dll.config
+E:\Downloads\JobPortal\JobPortal\DataLayer\bin\Debug\EntityFramework.xml
+E:\Downloads\JobPortal\JobPortal\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\Downloads\JobPortal\JobPortal\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\Downloads\JobPortal\JobPortal\DataLayer\obj\Debug\DataLayer.dll
+E:\Downloads\JobPortal\JobPortal\DataLayer\obj\Debug\DataLayer.pdb

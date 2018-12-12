@@ -1,0 +1,46 @@
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\JobPortal.exe.config
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\JobPortal.exe
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\JobPortal.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\BusinessLayer.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\Model.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\DataLayer.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\EntityFramework.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\BusinessLayer.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\Model.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\DataLayer.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\EntityFramework.xml
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\obj\Debug\JobPortal.csprojResolveAssemblyReference.cache
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\obj\Debug\JobPortal.Form1.resources
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\obj\Debug\JobPortal.Main.resources
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\obj\Debug\JobPortal.Properties.Resources.resources
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.GenerateResource.Cache
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\obj\Debug\JobPortal.exe
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\obj\Debug\JobPortal.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\EntityFramework.SqlServer.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\bin\Debug\EntityFramework.SqlServer.xml
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\JobPortal\obj\Debug\JobPortal.frmSignIn.resources
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\JobPortal.exe.config
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\JobPortal.exe
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\JobPortal.pdb
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\BusinessLayer.dll
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\EntityFramework.dll
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\EntityFramework.SqlServer.dll
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\Model.dll
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\DataLayer.dll
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\BusinessLayer.pdb
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\Model.pdb
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\Model.dll.config
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\EntityFramework.xml
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\EntityFramework.SqlServer.xml
+E:\Downloads\JobPortal\JobPortal\JobPortal\bin\Debug\DataLayer.pdb
+E:\Downloads\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.csprojResolveAssemblyReference.cache
+E:\Downloads\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.Form1.resources
+E:\Downloads\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.frmSignIn.resources
+E:\Downloads\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.Main.resources
+E:\Downloads\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.Properties.Resources.resources
+E:\Downloads\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.GenerateResource.Cache
+E:\Downloads\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.exe
+E:\Downloads\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.pdb
+E:\Downloads\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.CompanyInfo.resources
+E:\Downloads\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.InfoUser.resources
+E:\Downloads\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.Education.resources

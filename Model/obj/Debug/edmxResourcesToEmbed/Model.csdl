@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JobsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="AdID" />
+    </Key>
+    <Property Name="AdID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdPass" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AdName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AdPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AdEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Jobs" Relationship="Self.FK_Job_City_CityID" FromRole="City" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="CompanyInfo">
+    <Key>
+      <PropertyRef Name="ComID" />
+    </Key>
+    <Property Name="ComID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComPass" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ComName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ComStatus" Type="Boolean" />
+    <Property Name="EmailCom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AboutCom" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="AddressCom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Phone1Com" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Phone2Com" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="WebsiteCom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CompanyListAppylies" Relationship="Self.FK_CompanyListAppyly_CompanyInfo_ComID" FromRole="CompanyInfo" ToRole="CompanyListAppyly" />
+  </EntityType>
+  <EntityType Name="CompanyListAppyly">
+    <Key>
+      <PropertyRef Name="ComID" />
+      <PropertyRef Name="JobID" />
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="ComID" Type="Int32" Nullable="false" />
+    <Property Name="JobID" Type="Int32" Nullable="false" />
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="CHECKUSER" Type="Boolean" />
+    <NavigationProperty Name="CompanyInfo" Relationship="Self.FK_CompanyListAppyly_CompanyInfo_ComID" FromRole="CompanyListAppyly" ToRole="CompanyInfo" />
+    <NavigationProperty Name="InfoUser" Relationship="Self.FK_CompanyListAppyly_InfoUser_USERID" FromRole="CompanyListAppyly" ToRole="InfoUser" />
+    <NavigationProperty Name="Job" Relationship="Self.FK_CompanyListAppyly_Job_JobID" FromRole="CompanyListAppyly" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="Education">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="EduID" />
+    </Key>
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="EduID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameEdu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FromEdu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DecripEdu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="InfoUser" Relationship="Self.FK_Education_InfoUser_USERID" FromRole="Education" ToRole="InfoUser" />
+  </EntityType>
+  <EntityType Name="Employment">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="EmpID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameEmp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FromEmp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DecripEmp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="InfoUser" Relationship="Self.FK_Employment_InfoUser_UserID" FromRole="Employment" ToRole="InfoUser" />
+  </EntityType>
+  <EntityType Name="InfoUser">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FULLNAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ABOUTME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BIRTHDAY" Type="DateTime" Precision="0" />
+    <Property Name="Datecreate" Type="DateTime" Precision="0" />
+    <Property Name="Livein" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="Skill" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CompanyListAppylies" Relationship="Self.FK_CompanyListAppyly_InfoUser_USERID" FromRole="InfoUser" ToRole="CompanyListAppyly" />
+    <NavigationProperty Name="Educations" Relationship="Self.FK_Education_InfoUser_USERID" FromRole="InfoUser" ToRole="Education" />
+    <NavigationProperty Name="Employments" Relationship="Self.FK_Employment_InfoUser_UserID" FromRole="InfoUser" ToRole="Employment" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Name="JobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComID" Type="Int32" />
+    <Property Name="JobName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JobDetail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="JobStatus" Type="Boolean" />
+    <Property Name="ViewCount" Type="Int32" />
+    <Property Name="JobCatID" Type="Int32" />
+    <Property Name="PositionID" Type="Int32" />
+    <Property Name="CityID" Type="Int32" />
+    <Property Name="SalaryMin" Type="Int32" />
+    <Property Name="SalaryMax" Type="Int32" />
+    <Property Name="PostDay" Type="DateTime" Precision="0" />
+    <Property Name="StartDay" Type="DateTime" Precision="0" />
+    <Property Name="EndDay" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="City" Relationship="Self.FK_Job_City_CityID" FromRole="Job" ToRole="City" />
+    <NavigationProperty Name="CompanyListAppylies" Relationship="Self.FK_CompanyListAppyly_Job_JobID" FromRole="Job" ToRole="CompanyListAppyly" />
+    <NavigationProperty Name="JobCatalog" Relationship="Self.FK_Job_JobCatalog_JobCatID" FromRole="Job" ToRole="JobCatalog" />
+    <NavigationProperty Name="Position" Relationship="Self.FK_Job_Position_PositionID" FromRole="Job" ToRole="Position" />
+  </EntityType>
+  <EntityType Name="JobCatalog">
+    <Key>
+      <PropertyRef Name="JobCataID" />
+    </Key>
+    <Property Name="JobCataID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CataName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Jobs" Relationship="Self.FK_Job_JobCatalog_JobCatID" FromRole="JobCatalog" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="Position">
+    <Key>
+      <PropertyRef Name="PositionID" />
+    </Key>
+    <Property Name="PositionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PositionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Jobs" Relationship="Self.FK_Job_Position_PositionID" FromRole="Position" ToRole="Job" />
+  </EntityType>
+  <Association Name="FK_Job_City_CityID">
+    <End Role="City" Type="Self.City" Multiplicity="0..1" />
+    <End Role="Job" Type="Self.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="CityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyListAppyly_CompanyInfo_ComID">
+    <End Role="CompanyInfo" Type="Self.CompanyInfo" Multiplicity="1" />
+    <End Role="CompanyListAppyly" Type="Self.CompanyListAppyly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompanyInfo">
+        <PropertyRef Name="ComID" />
+      </Principal>
+      <Dependent Role="CompanyListAppyly">
+        <PropertyRef Name="ComID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyListAppyly_InfoUser_USERID">
+    <End Role="InfoUser" Type="Self.InfoUser" Multiplicity="1" />
+    <End Role="CompanyListAppyly" Type="Self.CompanyListAppyly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoUser">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="CompanyListAppyly">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyListAppyly_Job_JobID">
+    <End Role="Job" Type="Self.Job" Multiplicity="1" />
+    <End Role="CompanyListAppyly" Type="Self.CompanyListAppyly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="JobID" />
+      </Principal>
+      <Dependent Role="CompanyListAppyly">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Education_InfoUser_USERID">
+    <End Role="InfoUser" Type="Self.InfoUser" Multiplicity="1" />
+    <End Role="Education" Type="Self.Education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoUser">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="Education">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employment_InfoUser_UserID">
+    <End Role="InfoUser" Type="Self.InfoUser" Multiplicity="1" />
+    <End Role="Employment" Type="Self.Employment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoUser">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="Employment">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_JobCatalog_JobCatID">
+    <End Role="JobCatalog" Type="Self.JobCatalog" Multiplicity="0..1" />
+    <End Role="Job" Type="Self.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobCatalog">
+        <PropertyRef Name="JobCataID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="JobCatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_Position_PositionID">
+    <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="Job" Type="Self.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Position">
+        <PropertyRef Name="PositionID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="PositionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JobsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="Cities" EntityType="Self.City" />
+    <EntitySet Name="CompanyInfoes" EntityType="Self.CompanyInfo" />
+    <EntitySet Name="CompanyListAppylies" EntityType="Self.CompanyListAppyly" />
+    <EntitySet Name="Educations" EntityType="Self.Education" />
+    <EntitySet Name="Employments" EntityType="Self.Employment" />
+    <EntitySet Name="InfoUsers" EntityType="Self.InfoUser" />
+    <EntitySet Name="Jobs" EntityType="Self.Job" />
+    <EntitySet Name="JobCatalogs" EntityType="Self.JobCatalog" />
+    <EntitySet Name="Positions" EntityType="Self.Position" />
+    <AssociationSet Name="FK_Job_City_CityID" Association="Self.FK_Job_City_CityID">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyListAppyly_CompanyInfo_ComID" Association="Self.FK_CompanyListAppyly_CompanyInfo_ComID">
+      <End Role="CompanyInfo" EntitySet="CompanyInfoes" />
+      <End Role="CompanyListAppyly" EntitySet="CompanyListAppylies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyListAppyly_InfoUser_USERID" Association="Self.FK_CompanyListAppyly_InfoUser_USERID">
+      <End Role="InfoUser" EntitySet="InfoUsers" />
+      <End Role="CompanyListAppyly" EntitySet="CompanyListAppylies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyListAppyly_Job_JobID" Association="Self.FK_CompanyListAppyly_Job_JobID">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="CompanyListAppyly" EntitySet="CompanyListAppylies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Education_InfoUser_USERID" Association="Self.FK_Education_InfoUser_USERID">
+      <End Role="InfoUser" EntitySet="InfoUsers" />
+      <End Role="Education" EntitySet="Educations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employment_InfoUser_UserID" Association="Self.FK_Employment_InfoUser_UserID">
+      <End Role="InfoUser" EntitySet="InfoUsers" />
+      <End Role="Employment" EntitySet="Employments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_JobCatalog_JobCatID" Association="Self.FK_Job_JobCatalog_JobCatID">
+      <End Role="JobCatalog" EntitySet="JobCatalogs" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_Position_PositionID" Association="Self.FK_Job_Position_PositionID">
+      <End Role="Position" EntitySet="Positions" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <FunctionImport Name="sp_Login" EntitySet="Admins" ReturnType="Collection(JobsModel.Admin)">
+      <Parameter Name="user" Mode="In" Type="String" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Signin">
+      <Parameter Name="user" Mode="In" Type="String" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_Login_Result">
+    <Property Type="Int32" Name="AdID" Nullable="false" />
+    <Property Type="String" Name="AdPass" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="AdName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AdPhone" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="AdEmail" Nullable="true" MaxLength="30" />
+  </ComplexType>
+</Schema>

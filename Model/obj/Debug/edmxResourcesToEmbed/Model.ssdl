@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JobsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="AdID" />
+    </Key>
+    <Property Name="AdID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdPass" Type="varchar" MaxLength="20" />
+    <Property Name="AdName" Type="varchar" MaxLength="50" />
+    <Property Name="AdPhone" Type="varchar" MaxLength="20" />
+    <Property Name="AdEmail" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CompanyInfo">
+    <Key>
+      <PropertyRef Name="ComID" />
+    </Key>
+    <Property Name="ComID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ComPass" Type="varchar" MaxLength="20" />
+    <Property Name="ComName" Type="varchar" MaxLength="100" />
+    <Property Name="ComStatus" Type="bit" />
+    <Property Name="EmailCom" Type="varchar" MaxLength="50" />
+    <Property Name="AboutCom" Type="varchar" MaxLength="250" />
+    <Property Name="AddressCom" Type="varchar" MaxLength="100" />
+    <Property Name="Phone1Com" Type="varchar" MaxLength="20" />
+    <Property Name="Phone2Com" Type="varchar" MaxLength="20" />
+    <Property Name="WebsiteCom" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CompanyListAppyly">
+    <Key>
+      <PropertyRef Name="ComID" />
+      <PropertyRef Name="JobID" />
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="ComID" Type="int" Nullable="false" />
+    <Property Name="JobID" Type="int" Nullable="false" />
+    <Property Name="USERID" Type="int" Nullable="false" />
+    <Property Name="CHECKUSER" Type="bit" />
+  </EntityType>
+  <EntityType Name="Education">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="EduID" />
+    </Key>
+    <Property Name="USERID" Type="int" Nullable="false" />
+    <Property Name="EduID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameEdu" Type="varchar" MaxLength="50" />
+    <Property Name="FromEdu" Type="varchar" MaxLength="50" />
+    <Property Name="DecripEdu" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Employment">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="EmpID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameEmp" Type="varchar" MaxLength="50" />
+    <Property Name="FromEmp" Type="varchar" MaxLength="50" />
+    <Property Name="DecripEmp" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="InfoUser">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PASS" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FULLNAME" Type="varchar" MaxLength="255" />
+    <Property Name="ABOUTME" Type="varchar" MaxLength="100" />
+    <Property Name="BIRTHDAY" Type="date" />
+    <Property Name="Datecreate" Type="date" />
+    <Property Name="Livein" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="char" MaxLength="7" />
+    <Property Name="Skill" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Website" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Name="JobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ComID" Type="int" />
+    <Property Name="JobName" Type="varchar" MaxLength="100" />
+    <Property Name="JobDetail" Type="varchar" MaxLength="200" />
+    <Property Name="JobStatus" Type="bit" />
+    <Property Name="ViewCount" Type="int" />
+    <Property Name="JobCatID" Type="int" />
+    <Property Name="PositionID" Type="int" />
+    <Property Name="CityID" Type="int" />
+    <Property Name="SalaryMin" Type="int" />
+    <Property Name="SalaryMax" Type="int" />
+    <Property Name="PostDay" Type="date" />
+    <Property Name="StartDay" Type="date" />
+    <Property Name="EndDay" Type="date" />
+  </EntityType>
+  <EntityType Name="JobCatalog">
+    <Key>
+      <PropertyRef Name="JobCataID" />
+    </Key>
+    <Property Name="JobCataID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CataName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Position">
+    <Key>
+      <PropertyRef Name="PositionID" />
+    </Key>
+    <Property Name="PositionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PositionName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_CompanyListAppyly_CompanyInfo_ComID">
+    <End Role="CompanyInfo" Type="Self.CompanyInfo" Multiplicity="1" />
+    <End Role="CompanyListAppyly" Type="Self.CompanyListAppyly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompanyInfo">
+        <PropertyRef Name="ComID" />
+      </Principal>
+      <Dependent Role="CompanyListAppyly">
+        <PropertyRef Name="ComID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyListAppyly_InfoUser_USERID">
+    <End Role="InfoUser" Type="Self.InfoUser" Multiplicity="1" />
+    <End Role="CompanyListAppyly" Type="Self.CompanyListAppyly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoUser">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="CompanyListAppyly">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyListAppyly_Job_JobID">
+    <End Role="Job" Type="Self.Job" Multiplicity="1" />
+    <End Role="CompanyListAppyly" Type="Self.CompanyListAppyly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="JobID" />
+      </Principal>
+      <Dependent Role="CompanyListAppyly">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Education_InfoUser_USERID">
+    <End Role="InfoUser" Type="Self.InfoUser" Multiplicity="1" />
+    <End Role="Education" Type="Self.Education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoUser">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="Education">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employment_InfoUser_UserID">
+    <End Role="InfoUser" Type="Self.InfoUser" Multiplicity="1" />
+    <End Role="Employment" Type="Self.Employment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoUser">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="Employment">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_City_CityID">
+    <End Role="City" Type="Self.City" Multiplicity="0..1" />
+    <End Role="Job" Type="Self.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="CityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_JobCatalog_JobCatID">
+    <End Role="JobCatalog" Type="Self.JobCatalog" Multiplicity="0..1" />
+    <End Role="Job" Type="Self.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobCatalog">
+        <PropertyRef Name="JobCataID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="JobCatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_Position_PositionID">
+    <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="Job" Type="Self.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Position">
+        <PropertyRef Name="PositionID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="PositionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user" Type="varchar" Mode="In" />
+    <Parameter Name="pass" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_Signin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user" Type="varchar" Mode="In" />
+    <Parameter Name="pass" Type="varchar" Mode="In" />
+    <Parameter Name="phone" Type="varchar" Mode="In" />
+    <Parameter Name="email" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="JobsModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyInfo" EntityType="Self.CompanyInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyListAppyly" EntityType="Self.CompanyListAppyly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Education" EntityType="Self.Education" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employment" EntityType="Self.Employment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InfoUser" EntityType="Self.InfoUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Job" EntityType="Self.Job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobCatalog" EntityType="Self.JobCatalog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CompanyListAppyly_CompanyInfo_ComID" Association="Self.FK_CompanyListAppyly_CompanyInfo_ComID">
+      <End Role="CompanyInfo" EntitySet="CompanyInfo" />
+      <End Role="CompanyListAppyly" EntitySet="CompanyListAppyly" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyListAppyly_InfoUser_USERID" Association="Self.FK_CompanyListAppyly_InfoUser_USERID">
+      <End Role="InfoUser" EntitySet="InfoUser" />
+      <End Role="CompanyListAppyly" EntitySet="CompanyListAppyly" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyListAppyly_Job_JobID" Association="Self.FK_CompanyListAppyly_Job_JobID">
+      <End Role="Job" EntitySet="Job" />
+      <End Role="CompanyListAppyly" EntitySet="CompanyListAppyly" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Education_InfoUser_USERID" Association="Self.FK_Education_InfoUser_USERID">
+      <End Role="InfoUser" EntitySet="InfoUser" />
+      <End Role="Education" EntitySet="Education" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employment_InfoUser_UserID" Association="Self.FK_Employment_InfoUser_UserID">
+      <End Role="InfoUser" EntitySet="InfoUser" />
+      <End Role="Employment" EntitySet="Employment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_City_CityID" Association="Self.FK_Job_City_CityID">
+      <End Role="City" EntitySet="City" />
+      <End Role="Job" EntitySet="Job" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_JobCatalog_JobCatID" Association="Self.FK_Job_JobCatalog_JobCatID">
+      <End Role="JobCatalog" EntitySet="JobCatalog" />
+      <End Role="Job" EntitySet="Job" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_Position_PositionID" Association="Self.FK_Job_Position_PositionID">
+      <End Role="Position" EntitySet="Position" />
+      <End Role="Job" EntitySet="Job" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

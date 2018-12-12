@@ -1,0 +1,23 @@
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\BusinessLayer\bin\Debug\DataLayer.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\BusinessLayer\bin\Debug\Model.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\BusinessLayer\bin\Debug\EntityFramework.dll
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\BusinessLayer\bin\Debug\DataLayer.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\BusinessLayer\bin\Debug\Model.pdb
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\BusinessLayer\bin\Debug\EntityFramework.xml
+D:\1.NAM JOKER\Bai tap\HeQTCSDL\DoAnCuoiKi\JobPortal\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\bin\Debug\BusinessLayer.dll
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\bin\Debug\BusinessLayer.pdb
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\bin\Debug\DataLayer.dll
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\bin\Debug\Model.dll
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\bin\Debug\EntityFramework.dll
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\bin\Debug\DataLayer.pdb
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\bin\Debug\Model.pdb
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\bin\Debug\Model.dll.config
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\bin\Debug\EntityFramework.xml
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\obj\Debug\BusinessLayer.dll
+E:\Downloads\JobPortal\JobPortal\BusinessLayer\obj\Debug\BusinessLayer.pdb

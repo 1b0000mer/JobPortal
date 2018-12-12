@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JobsModelStoreContainer" CdmEntityContainer="JobsEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="JobsModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="AdID" ColumnName="AdID" />
+          <ScalarProperty Name="AdPass" ColumnName="AdPass" />
+          <ScalarProperty Name="AdName" ColumnName="AdName" />
+          <ScalarProperty Name="AdPhone" ColumnName="AdPhone" />
+          <ScalarProperty Name="AdEmail" ColumnName="AdEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="JobsModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyInfoes">
+      <EntityTypeMapping TypeName="JobsModel.CompanyInfo">
+        <MappingFragment StoreEntitySet="CompanyInfo">
+          <ScalarProperty Name="ComID" ColumnName="ComID" />
+          <ScalarProperty Name="ComPass" ColumnName="ComPass" />
+          <ScalarProperty Name="ComName" ColumnName="ComName" />
+          <ScalarProperty Name="ComStatus" ColumnName="ComStatus" />
+          <ScalarProperty Name="EmailCom" ColumnName="EmailCom" />
+          <ScalarProperty Name="AboutCom" ColumnName="AboutCom" />
+          <ScalarProperty Name="AddressCom" ColumnName="AddressCom" />
+          <ScalarProperty Name="Phone1Com" ColumnName="Phone1Com" />
+          <ScalarProperty Name="Phone2Com" ColumnName="Phone2Com" />
+          <ScalarProperty Name="WebsiteCom" ColumnName="WebsiteCom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyListAppylies">
+      <EntityTypeMapping TypeName="JobsModel.CompanyListAppyly">
+        <MappingFragment StoreEntitySet="CompanyListAppyly">
+          <ScalarProperty Name="ComID" ColumnName="ComID" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="CHECKUSER" ColumnName="CHECKUSER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Educations">
+      <EntityTypeMapping TypeName="JobsModel.Education">
+        <MappingFragment StoreEntitySet="Education">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="EduID" ColumnName="EduID" />
+          <ScalarProperty Name="NameEdu" ColumnName="NameEdu" />
+          <ScalarProperty Name="FromEdu" ColumnName="FromEdu" />
+          <ScalarProperty Name="DecripEdu" ColumnName="DecripEdu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employments">
+      <EntityTypeMapping TypeName="JobsModel.Employment">
+        <MappingFragment StoreEntitySet="Employment">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="NameEmp" ColumnName="NameEmp" />
+          <ScalarProperty Name="FromEmp" ColumnName="FromEmp" />
+          <ScalarProperty Name="DecripEmp" ColumnName="DecripEmp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoUsers">
+      <EntityTypeMapping TypeName="JobsModel.InfoUser">
+        <MappingFragment StoreEntitySet="InfoUser">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASS" ColumnName="PASS" />
+          <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+          <ScalarProperty Name="ABOUTME" ColumnName="ABOUTME" />
+          <ScalarProperty Name="BIRTHDAY" ColumnName="BIRTHDAY" />
+          <ScalarProperty Name="Datecreate" ColumnName="Datecreate" />
+          <ScalarProperty Name="Livein" ColumnName="Livein" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Skill" ColumnName="Skill" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="JobsModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+          <ScalarProperty Name="ComID" ColumnName="ComID" />
+          <ScalarProperty Name="JobName" ColumnName="JobName" />
+          <ScalarProperty Name="JobDetail" ColumnName="JobDetail" />
+          <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="JobCatID" ColumnName="JobCatID" />
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="SalaryMin" ColumnName="SalaryMin" />
+          <ScalarProperty Name="SalaryMax" ColumnName="SalaryMax" />
+          <ScalarProperty Name="PostDay" ColumnName="PostDay" />
+          <ScalarProperty Name="StartDay" ColumnName="StartDay" />
+          <ScalarProperty Name="EndDay" ColumnName="EndDay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobCatalogs">
+      <EntityTypeMapping TypeName="JobsModel.JobCatalog">
+        <MappingFragment StoreEntitySet="JobCatalog">
+          <ScalarProperty Name="JobCataID" ColumnName="JobCataID" />
+          <ScalarProperty Name="CataName" ColumnName="CataName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Positions">
+      <EntityTypeMapping TypeName="JobsModel.Position">
+        <MappingFragment StoreEntitySet="Position">
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Login" FunctionName="JobsModel.Store.sp_Login" />
+    <FunctionImportMapping FunctionImportName="sp_Signin" FunctionName="JobsModel.Store.sp_Signin" />
+  </EntityContainerMapping>
+</Mapping>
