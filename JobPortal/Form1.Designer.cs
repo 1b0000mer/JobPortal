@@ -50,7 +50,7 @@
             this.txtboxUserName.Location = new System.Drawing.Point(168, 61);
             this.txtboxUserName.Name = "txtboxUserName";
             this.txtboxUserName.Size = new System.Drawing.Size(168, 20);
-            this.txtboxUserName.TabIndex = 1;
+            this.txtboxUserName.TabIndex = 0;
             // 
             // btnLogin
             // 
@@ -84,7 +84,7 @@
             this.btnSignin.Location = new System.Drawing.Point(261, 178);
             this.btnSignin.Name = "btnSignin";
             this.btnSignin.Size = new System.Drawing.Size(75, 23);
-            this.btnSignin.TabIndex = 2;
+            this.btnSignin.TabIndex = 3;
             this.btnSignin.Text = "Đăng kí";
             this.btnSignin.UseVisualStyleBackColor = true;
             this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);

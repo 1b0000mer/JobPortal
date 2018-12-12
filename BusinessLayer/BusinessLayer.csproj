@@ -40,10 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CityBUL.cs" />
     <Compile Include="CompanyInfoBUL.cs" />
-    <Compile Include="EducationBUL.cs" />
-    <Compile Include="InfoUserBUL.cs" />
+    <Compile Include="JobBUL.cs" />
+    <Compile Include="JobCatalogBUL.cs" />
     <Compile Include="LoginBUL.cs" />
+    <Compile Include="PositionBUL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignInBUL.cs" />
   </ItemGroup>

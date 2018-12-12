@@ -12,6 +12,10 @@ namespace JobPortal
 {
     public partial class Form1 : Form
     {
+        public class state
+        {
+            public static int login;
+        }
         public Form1()
         {
             InitializeComponent();
@@ -19,19 +23,17 @@ namespace JobPortal
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //string user = txtboxUserName.Text;
-            //string pass = txtBoxPass.Text;
-            //if (LoginBUL.Login(user, pass)!=null)
-            //{
-            //    this.Hide();
-                Main main = new Main();
-                main.ShowDialog();
-                this.Show();
-            //            }
-            //            else
-            //            {
-            //                MessageBox.Show("Thông tin đăng nhập sai");
-            //            }
+            string user = txtboxUserName.Text;
+            string pass = txtBoxPass.Text;
+            if (LoginBUL.Login(user, pass) != null)
+            {
+                state.login = 1;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Thông tin đăng nhập sai");
+            }
         }
 
         private void btnSignin_Click(object sender, EventArgs e)
@@ -39,7 +41,7 @@ namespace JobPortal
             this.Hide();
             frmSignIn sign = new frmSignIn();
             sign.ShowDialog();
-            this.Show();
+            
         }
     }
 }

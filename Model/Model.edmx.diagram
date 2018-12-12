@@ -11,7 +11,7 @@
         <EntityTypeShape EntityType="JobsModel.CompanyListAppyly" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="JobsModel.Education" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="JobsModel.Employment" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="JobsModel.InfoUser" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsModel.InfoUser" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
         <EntityTypeShape EntityType="JobsModel.Job" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="JobsModel.JobCatalog" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="JobsModel.Position" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />

@@ -32,6 +32,7 @@ namespace DataLayer
             db.CompanyInfoes.Attach(add);
             db.Entry(add).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
+
         }
     }
 

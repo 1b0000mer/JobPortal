@@ -27,6 +27,8 @@ namespace JobPortal
                     SignInBUL.SignIn(txtBoxName.Text, txtBoxPass.Text, txtBoxPhone.Text, txtBoxEmail.Text);
                     MessageBox.Show("Thành công");
                     this.Close();
+                    Form frm = new Form1();
+                    frm.ShowDialog();
                 }
                 catch
                 {
@@ -41,7 +43,9 @@ namespace JobPortal
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Form frm = new Form1();
+            frm.ShowDialog();
         }
     }
 }

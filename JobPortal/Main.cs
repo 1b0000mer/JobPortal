@@ -24,12 +24,5 @@ namespace JobPortal
             frm.ShowDialog();
             this.Show();
         }
-        private void btnInfoUser_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            InfoUser frm = new InfoUser();
-            frm.ShowDialog();
-            this.Show();
-        }
     }
 }

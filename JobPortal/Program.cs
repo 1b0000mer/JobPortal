@@ -16,7 +16,16 @@ namespace JobPortal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form login = new Form1();
+            login.ShowDialog();
+            if (Form1.state.login == 1)
+            {
+                Application.Run(new Main());
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }

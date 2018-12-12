@@ -42,6 +42,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,17 +62,17 @@
     <Compile Include="CompanyInfo.Designer.cs">
       <DependentUpon>CompanyInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Education.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Education.Designer.cs">
-      <DependentUpon>Education.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJob.Designer.cs">
+      <DependentUpon>frmJob.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSignIn.cs">
       <SubType>Form</SubType>
@@ -94,11 +97,11 @@
     <EmbeddedResource Include="CompanyInfo.resx">
       <DependentUpon>CompanyInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Education.resx">
-      <DependentUpon>Education.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJob.resx">
+      <DependentUpon>frmJob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
@@ -118,6 +121,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,6 +148,13 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

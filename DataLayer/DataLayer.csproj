@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CityDAL.cs" />
     <Compile Include="CompanyInfoDAL.cs" />
-    <Compile Include="EducationDAL.cs" />
-    <Compile Include="InfoUserDAL.cs" />
+    <Compile Include="JobCatalogDAL.cs" />
+    <Compile Include="JobDAL.cs" />
     <Compile Include="LoginDAL.cs" />
+    <Compile Include="PositionDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignInDAL.cs" />
   </ItemGroup>
