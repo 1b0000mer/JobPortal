@@ -35,6 +35,6 @@ G:\JobPortal\JobPortal\Model\bin\Debug\EntityFramework.dll
 G:\JobPortal\JobPortal\Model\bin\Debug\EntityFramework.SqlServer.dll
 G:\JobPortal\JobPortal\Model\bin\Debug\EntityFramework.xml
 G:\JobPortal\JobPortal\Model\bin\Debug\EntityFramework.SqlServer.xml
-G:\JobPortal\JobPortal\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 G:\JobPortal\JobPortal\Model\obj\Debug\Model.dll
 G:\JobPortal\JobPortal\Model\obj\Debug\Model.pdb
+G:\JobPortal\JobPortal\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

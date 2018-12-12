@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="CityDAL.cs" />
     <Compile Include="CompanyInfoDAL.cs" />
+    <Compile Include="EducationDAL.cs" />
+    <Compile Include="InfoUserDAL.cs" />
     <Compile Include="JobCatalogDAL.cs" />
     <Compile Include="JobDAL.cs" />
     <Compile Include="LoginDAL.cs" />

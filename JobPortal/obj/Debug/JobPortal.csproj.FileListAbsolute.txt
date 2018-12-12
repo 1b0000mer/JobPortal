@@ -95,3 +95,4 @@ G:\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.Properties.Resources.resour
 G:\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.GenerateResource.Cache
 G:\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.exe
 G:\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.pdb
+G:\JobPortal\JobPortal\JobPortal\obj\Debug\JobPortal.Education.resources
